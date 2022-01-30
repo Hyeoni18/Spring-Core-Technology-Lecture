@@ -265,7 +265,7 @@ public class BookService implements InitializingBean {
 }
 ```
 
-![1643576427688](D:\egovProject\core-spring\강의노트(스프링프레임워크핵심기술)\1643576427688.png)
+![1643576427688](/1643576427688.png)
 
 11, 14번을 보면 두 가지의 메소드 콜백을 더 제공해주는거야. 그 중에서 우리는 AutowiredAnnotationBeanPostProcessor 가 동작을 해서 Autowired 에노테이션을 처리해주는거야. 여기에 해당하는 bean 을 찾아서 주입을 해준다는 거지. 언제? Initialization 전에. 
 
@@ -290,7 +290,7 @@ public class BookService {
 
 그리고 console 창을 보면 출력 위치가 좀 달라. 
 
-![1643576917828](D:\egovProject\core-spring\강의노트(스프링프레임워크핵심기술)\1643576917828.png)
+![1643576917828](/1643576917828.png)
 
 1번이 PostConstruct , 2번이 Runner 클래스
 
