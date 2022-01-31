@@ -1,25 +1,14 @@
 package hello.corespring;
 
-import org.springframework.boot.convert.DataSizeUnit;
-import org.springframework.lang.NonNull;
-
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
-
 public class Event {
 
-    Integer id;
+    private Integer id;
 
-    @NotEmpty
-    String title;
+    private String title;
 
-    @Min(0)
-    Integer limit;
-
-    @Email
-    String eamil;
+    public Event(Integer id) {
+        this.id = id;
+    }
 
     public Integer getId() {
         return id;
@@ -37,19 +26,11 @@ public class Event {
         this.title = title;
     }
 
-    public Integer getLimit() {
-        return limit;
-    }
-
-    public void setLimit(Integer limit) {
-        this.limit = limit;
-    }
-
-    public String getEamil() {
-        return eamil;
-    }
-
-    public void setEamil(String eamil) {
-        this.eamil = eamil;
+    @Override
+    public String toString() {
+        return "Event{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                '}';
     }
 }
