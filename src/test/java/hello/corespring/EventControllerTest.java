@@ -13,7 +13,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest
+//WebMvcTest 어노테이션은 슬라이싱 테스트라고 해서, 부트와 관련된건데, 계층형 테스트임. 웹과 관련된 빈만 등록을 해주는. 주로 컨트롤러만 등록이 돼. 그러니까 컨버터와 포매터가 제대로 빈으로 등록 안되면 테스트가 깨질 우려가 있음.
+@WebMvcTest({EventConverter.StringToEventConverter.class, EventController.class}) //이런 경우에 이런식으로 빈으로 등록을 하고 테스트를 할 수 있음.
 class EventControllerTest {
 
     @Autowired
