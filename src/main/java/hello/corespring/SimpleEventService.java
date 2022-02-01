@@ -4,7 +4,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SimpleEventService implements EventService{
-//이건 그냥 타겟 객체야. 리얼 서브젝트에 해당하는 클래스야.
+
+    @PerfLogging //내가 만든 어노테이션
     @Override
     public void craeteEvent() {
         try {
@@ -15,6 +16,7 @@ public class SimpleEventService implements EventService{
         System.out.println("created an event");
     }
 
+    @PerfLogging
     @Override
     public void publishEvent() {
         try {
