@@ -1,10 +1,13 @@
 package hello.corespring;
 
-public interface EventService {
-//해당 인터페이스가 서브젝트야.
-    void craeteEvent();
+import org.springframework.lang.NonNull;
+import org.springframework.stereotype.Service;
 
-    void publishEvent();
+@Service
+public class EventService {
 
-    void deleteEvent();
+    @NonNull
+    public String craeteEvent(@NonNull String name) {
+        return null;
+    }
 }
